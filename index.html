@@ -78,23 +78,21 @@
                     click on the submit button when your done. Note all fields are compulsary
                 </p>
                 <form class="form">
-                    <label for="data-population">Population</label>
-                    <input required name="data-population" placeholder="Please enter the population" id="data-population">
-                    <label for="data-time-to-elapse">Time to elapse</label>
-                    <input required name="data-time-to-elapse" placeholder="Please enter the time to Elapse" id="data-time-to-elapse">
-                    <label for="data-reported-cases">reported cases</label>
-                    <input required name="data-reported-cases" placeholder="Please enter the number of cases reported" id="data-reported-cases">
-                    <label for="data-total-hospital-beds">total hospital beds</label>
-                    <input required name="data-total-hospital-beds" placeholder="Please enter the available hospital beds" id="data-total-hospital-beds">
-                    <label for="data-period-type">period type</label>
-                    <select required name="data-period-type" id="data-period-type">
+                    <label for="population">Population</label>
+                    <input required name="data-population" class="data-population" placeholder="Please enter the population" id="population">
+                    <label for="timeToElapse">Time to elapse</label>
+                    <input required name="data-time-to-elapse" class="data-time-to-elapse" placeholder="Please enter the time to Elapse" id="timeToElapse">
+                    <label for="reportedCases">reported cases</label>
+                    <input required name="data-reported-cases" class="data-reported-cases" placeholder="Please enter the number of cases reported" id="reportedCases">
+                    <label for="totalHospitalBeds">total hospital beds</label>
+                    <input required name="data-total-hospital-beds" placeholder="Please enter the available hospital beds" id="totalHospitalBeds">
+                    <label for="periodType">period type</label>
+                    <select required class="data-period-type" name="data-period-type" id="periodType">
                         <option value="days">Days</option>
                         <option value="weeks">Weeks</option>
                         <option value="months">Months</option>
                     </select>
-                    <button id="data-go-estimate" name="data-go-estimate" class="data-go-estimate" type="submit">
-                        Submit
-                    </button>
+                    <button id="data-go-estimate" name="data-go-estimate" class="data-go-estimate">Submit</button>
                 </form>
             </div>
         </main>
