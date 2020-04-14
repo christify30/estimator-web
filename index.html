@@ -5,64 +5,64 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="accessment for covid-19-estimator-js by facebook and andela">
-
+        <link rel="preload" as="style" href="/css/index.css">
         <style>
-            body, html{
-            background-color: #f5f5f5;
-            padding: 0px;
-            margin: 0px
-            }
-            header{
-            color: white;
-            background-color: black;
-            width: 100vw;
-            padding: 5px 0px 5px 5px;
-            }
+        body, html{
+        background-color: #f5f5f5;
+        padding: 0px;
+        margin: 0px
+        }
+        header{
+        color: white;
+        background-color: black;
+        width: 100vw;
+        padding: 5px 0px 5px 5px;
+        }
 
-            header a{
-            text-decoration: none;
-            color: white
-            }
+        header a{
+        text-decoration: none;
+        color: white
+        }
 
-            .div-with-form{
-            width: 100vw;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            }
-            .form{
-            background-color: white;
-            min-width: 50vw;
-            box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-            padding: 15px;
-            border-radius: 10px;
-            }
-            label, input, select{
-            display: block;
-            margin: 5px;
-            width: 95%
-            }
-            input,select{
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 5px
-            }
-            select{
-            height: 30px;
-            width: 98%
-            }
+        .div-with-form{
+        width: 100vw;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .form{
+        background-color: white;
+        min-width: 50vw;
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+        padding: 15px;
+        border-radius: 10px;
+        }
+        label, input, select{
+        display: block;
+        margin: 5px;
+        width: 95%
+        }
+        input,select{
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px
+        }
+        select{
+        height: 30px;
+        width: 98%
+        }
 
-            .data-go-estimate{
-            width: 150px;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 10px;
-            background-color: orange;
-            font-size: 14px
-            }
+        .data-go-estimate{
+        width: 150px;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: orange;
+        font-size: 14px
+        }
         </style>
     </head>
     <body>
@@ -77,23 +77,25 @@
                     Please fill the form below entering correct data on the correct covid-19 outbreak of your area.
                     click on the submit button when your done. Note all fields are compulsary
                 </p>
-                <form class="form">
-                    <label for="population">Population</label>
-                    <input required name="data-population" class="data-population" placeholder="Please enter the population" id="population">
-                    <label for="timeToElapse">Time to elapse</label>
-                    <input required name="data-time-to-elapse" class="data-time-to-elapse" placeholder="Please enter the time to Elapse" id="timeToElapse">
-                    <label for="reportedCases">reported cases</label>
-                    <input required name="data-reported-cases" class="data-reported-cases" placeholder="Please enter the number of cases reported" id="reportedCases">
-                    <label for="totalHospitalBeds">total hospital beds</label>
-                    <input required name="data-total-hospital-beds" placeholder="Please enter the available hospital beds" id="totalHospitalBeds">
-                    <label for="periodType">period type</label>
-                    <select required class="data-period-type" name="data-period-type" id="periodType">
+                <div class="form">
+                    <label for="data-population">Population</label>
+                    <input required name="data-population" placeholder="Please enter the population" id="data-population">
+                    <label for="data-time-to-elapse">Time to elapse</label>
+                    <input required name="data-time-to-elapse" placeholder="Please enter the time to Elapse" id="data-time-to-elapse">
+                    <label for="data-reported-cases">reported cases</label>
+                    <input required name="data-reported-cases" placeholder="Please enter the number of cases reported" id="data-reported-cases">
+                    <label for="data-total-hospital-beds">total hospital beds</label>
+                    <input required name="data-total-hospital-beds" placeholder="Please enter the available hospital beds" id="data-total-hospital-beds">
+                    <label for="data-period-type">period type</label>
+                    <select required name="data-period-type" id="data-period-type">
                         <option value="days">Days</option>
                         <option value="weeks">Weeks</option>
                         <option value="months">Months</option>
                     </select>
-                    <button id="data-go-estimate" name="data-go-estimate" class="data-go-estimate">Submit</button>
-                </form>
+                    <button id="data-go-estimate" name="data-go-estimate" class="data-go-estimate">
+                        Submit
+                    </button>
+                </div>
             </div>
         </main>
     </body>
